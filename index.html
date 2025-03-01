@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: linear-gradient(to right, #3498db, #2ecc71);
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        display: inline;
+        margin: 0 20px;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .navbar ul li a:hover {
+        color: #f39c12;
+      }
+
+      /* About Section */
+      .about {
+        padding: 50px 0;
+        background-color: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .about-content {
+        padding-left: 20px;
+        flex: 1;
+      }
+
+      .profile-img {
+        max-width: 150px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-bottom: 20px;
+      }
+
+      /* Projects Section */
+      .projects {
+        padding: 50px 0;
+      }
+
+      .project {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .project h3 {
+        margin-bottom: 10px;
+      }
+
+      .thumbnail {
+        width: 250px;
+        margin: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .thumbnail:hover {
+        transform: scale(1.1);
+      }
+
+      /* Contact Section */
+      .contact {
+        background-color: #333;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 5px solid #f39c12;
+        margin-top: auto;
+      }
+
+      footer p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media screen and (max-width: 768px) {
+        .navbar ul {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+        }
+
+        .container {
+          width: 90%;
+        }
+
+        .about {
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+        }
+
+        .about-content {
+          padding-left: 0;
+        }
+
+        .profile-img {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>My Portfolio</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="about" class="about">
+      <div class="container">
+        <img src="profil.jpeg" alt="Profile Picture" class="profile-img" />
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            Electrical Engineering student with a strong academic performance
+            and excellent interpersonal skills. Experienced in logo design,
+            image and video editing, and website layout design. Currently
+            seeking to further develop skills in website development and UI/UX
+            design through independent study opportunities and android
+            application development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project">
+          <h3>Project 1: Educational Blog Website</h3>
+          <p>
+            A website created to summarize and share lecture materials from my
+            courses. Built using HTML, CSS, Bootstrap, and JavaScript, this blog
+            allows users to easily navigate through various topics and access
+            summarized educational content in a simple and interactive format.
+          </p>
+
+          <!-- Thumbnail images for Project 1 -->
+          <div>
+            <img
+              src="project (1).png"
+              alt="Educational Blog Screenshot 1"
+              class="thumbnail"
+            />
+            <img
+              src="project (2).png"
+              alt="Educational Blog Screenshot 2"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <h3>Project 2: Daily Activity Website</h3>
+          <p>
+            During the month of Ramadan, I developed a website to document and
+            share my daily activities through video. Created with HTML, CSS,
+            Bootstrap, and JavaScript, the website showcases a personal log of
+            my activities throughout the day, serving both as a project and a
+            means to engage with daily routines during this special month.
+          </p>
+
+          <!-- Thumbnail images for Project 2 -->
+          <div>
+            <img
+              src="project2 (1).png"
+              alt="Daily Activity Website Screenshot 1"
+              class="thumbnail"
+            />
+            <img
+              src="project2 (2).png"
+              alt="Daily Activity Website Screenshot 2"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <h3>Project 3: Finance Management Website</h3>
+          <p>
+            This website enables users to manage their finances by tracking
+            income and expenses. Developed with HTML, CSS, Bootstrap,
+            JavaScript, and PHP, the site features user registration, login, and
+            a virtual account system where users can transfer funds between each
+            other. It is designed for individuals who want to better manage
+            their financial activities through an intuitive platform.
+          </p>
+
+          <!-- Thumbnail image for Project 3 -->
+          <div>
+            <img
+              src="project 3 (1).png"
+              alt="Finance Management Website Screenshot"
+              class="thumbnail"
+            />
+            <img
+              src="project 3 (2).png"
+              alt="Finance Management Website Screenshot"
+              class="thumbnail"
+            />
+            <img
+              src="project 3 (3).png"
+              alt="Finance Management Website Screenshot"
+              class="thumbnail"
+            />
+            <img
+              src="project 3 (4).png"
+              alt="Finance Management Website Screenshot"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+          <h3>Project 4: Obesifit Educational Website</h3>
+          <p>
+            A platform to provide educational content about obesity, where users
+            can access articles, videos, and tools like a BMI calculator and
+            daily calorie counter. The website was built with HTML, CSS,
+            JavaScript, React, and PHP, and includes a consultation feature for
+            users to interact with healthcare professionals. Doctors can also
+            upload content to share with users. This site aims to raise
+            awareness and provide valuable resources for managing obesity.
+          </p>
+
+          <!-- Thumbnail images for Project 4 -->
+          <div>
+            <img
+              src="project 4 (1).png"
+              alt="Obesifit Interface 2"
+              class="thumbnail"
+            />
+            <img
+              src="project 4 (2).png"
+              alt="Obesifit Interface 4"
+              class="thumbnail"
+            />
+            <img
+              src="project 4 (3).png"
+              alt="Obesifit Interface 7"
+              class="thumbnail"
+            />
+            <img
+              src="project 4 (4).png"
+              alt="Obesifit Interface 19"
+              class="thumbnail"
+            />
+            <img
+              src="project 4 (5).png"
+              alt="Obesifit Interface 13"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project">
+          <h3>Project 5: Mosque Administration System</h3>
+          <p>
+            A desktop application for mosque administration built with C#. The
+            application helps manage mosque income and expenses, activity
+            scheduling, inventory, and calculates Zakat. Additionally, it
+            includes a Qibla direction feature and an AI chatbot for
+            mosque-goers to ask questions. The application simplifies the mosque
+            management process and enhances administrative efficiency.
+          </p>
+
+          <!-- Thumbnail image for Project 5 -->
+          <div>
+            <img
+              src="project 5 (1).jpg"
+              alt="Mosque Administration System Screenshot 1"
+              class="thumbnail"
+            />
+            <img
+              src="project 5 (2).jpg"
+              alt="Mosque Administration System Screenshot 2"
+              class="thumbnail"
+            />
+            <img
+              src="project 5 (3).jpg"
+              alt="Mosque Administration System Screenshot 3"
+              class="thumbnail"
+            />
+            <img
+              src="project 5 (4).jpg"
+              alt="Mosque Administration System Screenshot 4"
+              class="thumbnail"
+            />
+            <img
+              src="project 5 (5).jpg"
+              alt="Mosque Administration System Screenshot 5"
+              class="thumbnail"
+            />
+            <img
+              src="project 5 (6).jpg"
+              alt="Mosque Administration System Screenshot 6"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p>Feel free to reach out to me via email: alifqadry@gmail.com</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+  </body>
+</html>
